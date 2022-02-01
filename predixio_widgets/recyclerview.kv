@@ -1,0 +1,115 @@
+###Machine
+<SelectableLabelMachine>:
+    canvas.before:
+        Color:
+            rgba: (1, 1, 1, 1) if self.selected else (0.5, 0.7, 0.9, 0.0)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    font_size: 12
+    color: 0,0,0,1
+
+<RecycleMachines>:
+    canvas.before:
+        Color:
+            rgba: 0.5,0.6,0.9,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    size_hint_max: self.parent.width*8/10, 75
+    pos:self.parent.width/2 -self.width/2, self.parent.height-self.height - 75
+    viewclass: 'SelectableLabelMachine'
+    SelectableRecycleBoxLayout:
+        default_size: None, dp(25)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+        multiselect: False
+        touch_multiselect: False
+###Material
+<SelectableLabelMaterial>:
+    canvas.before:
+        Color:
+            rgba: (1, 1, 1, 1) if self.selected else (0.2, 0.2, 0.2, 0)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    font_size: 12
+    color: 0,0,0,1
+
+<RecycleMaterial>:
+    canvas.before:
+        Color:
+            rgba: 0.5,0.6,0.9,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    size_hint_max: self.parent.width*8/10, 75
+    pos:self.parent.width/2 -self.width/2, self.parent.height-self.height - 175
+    viewclass: 'SelectableLabelMaterial'
+    SelectableRecycleBoxLayout:
+        default_size: None, dp(25)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+        multiselect: False
+        touch_multiselect: False
+
+###Support
+<RecycleMaterialSupport>:
+    id: material
+    canvas.before:
+        Color:
+            rgba: 0.3,0.3,0.3,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    size_hint_max: self.parent.width*3/4, 120
+    pos:self.parent.width/2 -self.width/2, self.parent.height-self.height - 80
+    viewclass: 'SelectableLabelMaterial'
+    SelectableRecycleBoxLayout:
+        default_size: None, dp(30)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+        multiselect: False
+        touch_multiselect: False
+###Couple
+<SelectableLabelCouple>:
+    canvas.before:
+        Color:
+            rgba: (1, 1, 1, 1) if self.selected else (0.2, 0.2, 0.2, 0)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    font_size: 12
+    color: 0,0,0,1
+
+<RecycleCouple>:
+    canvas.before:
+        Color:
+            rgba: 0.5,0.6,0.9,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    size_hint_max: self.parent.width*8/10, self.parent.height*6.5/10
+    pos:self.parent.width/2 -self.width/2, self.parent.height-self.height-75
+    viewclass: 'SelectableLabelCouple'
+    SelectableRecycleBoxLayout:
+        default_size: None, dp(25)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+        multiselect: False
+        touch_multiselect: False
